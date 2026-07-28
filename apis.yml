@@ -1,0 +1,83 @@
+aid: hedna
+url: https://raw.githubusercontent.com/api-evangelist/hedna/refs/heads/main/apis.yml
+name: HEDNA
+kind: company
+description: >-
+  HEDNA (Hotel Electronic Distribution Network Association) is a not-for-profit
+  trade association founded in 1991 and headquartered in Forest Hill, Maryland,
+  United States, that convenes the hotel distribution industry — hotel chains,
+  GDS operators, OTAs, switches, channel managers, payment providers and
+  connectivity vendors — around shared best practice for hospitality electronic
+  distribution. It sits alongside rather than inside the distribution chain: it
+  moves no inventory and processes no bookings, but its Disciplines
+  (Connectivity, Content Distribution, Payments, Data & Analytics, Revenue
+  Optimization) produce recommendation documents, and it co-authored the Open
+  Payments Alliance Standards Specification with HTNG and OpenTravel. HEDNA
+  publishes no developer portal, no API, and no machine-readable specification
+  on hedna.org; every probe of developer./developers./docs./api. subdomains and
+  of /developers, /api, /docs, /openapi.json, /swagger.json, /api-docs and
+  /.well-known/ failed (DNS failure or HTTP 404). Its publications library,
+  research reports and HEDNA U courseware are gated behind paid membership at
+  members.hedna.org (HTTP 403 Cloudflare challenge unauthenticated) and
+  pathlms.com/hedna. Honest posture: member-gated documents, no public API, no
+  exit path published.
+image: https://www.hedna.org/wp-content/uploads/2021/07/cropped-HEDNA-4C-FavIcon-2021-192x192.jpg
+tags:
+- Travel
+- United States
+- Hospitality
+- Hotels
+- Distribution
+- Booking
+- GDS
+- Standards
+- Trade Association
+created: '2026-07-28'
+modified: '2026-07-28'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.hedna.org/
+- type: About
+  url: https://www.hedna.org/who-we-are/
+- type: Blog
+  url: https://www.hedna.org/blog/
+- type: BlogRSS
+  url: https://www.hedna.org/feed/
+- type: Membership
+  url: https://www.hedna.org/membership/
+- type: Education
+  url: https://www.hedna.org/hedna-u/
+  name: HEDNA U
+  description: Member-gated distribution education delivered through
+    pathlms.com/hedna.
+- type: Committees
+  url: https://www.hedna.org/hednacommittees/
+  name: Committees and Disciplines
+- type: Events
+  url: https://www.hedna.org/events/
+- type: Insights
+  url: https://www.hedna.org/insights/
+  name: Insights
+  description: Public insights page is a "Coming Soon" placeholder that redirects
+    readers to the members-only publications library.
+- type: MemberPortal
+  url: https://members.hedna.org/
+  name: Members-Only Portal
+  description: YourMembership-hosted association management system holding the
+    publications library and research reports; returns HTTP 403 behind a
+    Cloudflare challenge to unauthenticated clients.
+- type: PrivacyPolicy
+  url: https://www.hedna.org/privacy-user-consent/
+- type: CodeOfConduct
+  url: https://www.hedna.org/code-of-conduct/
+- type: LinkedIn
+  url: https://www.linkedin.com/groups/79116
+- type: YouTube
+  url: https://www.youtube.com/channel/UCr5sBUgES3SZkMVgC7E5k_A
+- type: Email
+  url: mailto:info@hedna.org
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

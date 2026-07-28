@@ -1,0 +1,343 @@
+aid: hedna
+name: HEDNA
+review:
+  question: Does HEDNA publish a public developer portal, an API, or freely
+    downloadable machine-readable specifications?
+  answer: false
+  date: '2026-07-28'
+  reviewer: API Evangelist
+  tier: industry-body-standards
+  homeMarket: United States
+findings:
+  summary: |
+    HEDNA (Hotel Electronic Distribution Network Association) is a not-for-profit
+    trade association founded in 1991, headquartered at 2331 Rock Spring Road,
+    Forest Hill, Maryland, United States. It is a convening body for hotel
+    electronic distribution, not an operator of distribution infrastructure: it
+    holds no inventory, brokers no bookings, and issues no industry identifiers.
+
+    No developer portal, no API, and no machine-readable specification is
+    published on hedna.org. Every developer-oriented subdomain probed failed to
+    resolve, and every well-known specification path returned HTTP 404. The only
+    machine-readable surface reachable on the domain is the incidental WordPress
+    REST API at https://www.hedna.org/wp-json/ (HTTP 200, 15 namespaces, 249
+    routes) — an artifact of the site's CMS, not an offering HEDNA documents,
+    supports, or presents as a product. It is deliberately NOT listed in
+    apis.yml apis[].
+
+    HEDNA's technical output is prose and schema documents produced by its
+    Disciplines and by joint work with other bodies — most notably the Open
+    Payments Alliance Standards Specification (Phase I 2020, Phase II) authored
+    with HTNG and OpenTravel, plus Standards Committee documents such as
+    Management of Digital Assets, GDS Dual Representation Exception Process, and
+    360 Degrees Virtual Tour and Video Recommendations. None of these were found
+    freely downloadable from hedna.org during this review; the publications
+    library sits behind paid membership at members.hedna.org.
+
+    HTNG, HEDNA's closest peer body and co-author of the Open Payments Alliance
+    work, no longer resolves as an independent site (https://www.htng.org/
+    connection failure), which materially thins the set of alternative bodies
+    covering the same ground.
+  organization:
+    legalForm: not-for-profit trade association
+    founded: 1991
+    headquarters: 2331 Rock Spring Road, Forest Hill, Maryland, United States
+    scope: members headquartered in 20 countries with operations on six
+      continents (per hedna.org/who-we-are/)
+    role: convener and best-practice publisher for hotel electronic distribution
+  disciplines:
+  - Content Distribution
+  - Connectivity
+  - Payments
+  - Data & Analytics
+  - Revenue Optimization
+  committees:
+  - Membership
+  - Education (HEDNA U)
+  - Marketing
+  - Sponsorship
+  - Conference
+  - Future Leaders of HEDNA
+specifications:
+  publiclyDownloadable: []
+  memberGatedOrExternal:
+  - name: Open Payments Alliance Standards Specification (Payment Recipients,
+      Phase I)
+    coAuthors: HTNG, HEDNA, OpenTravel
+    year: 2020
+    machineReadable: schema messages reported in trade press; no public download
+      located on hedna.org
+    evidence: https://www.hedna.org/htng-and-hedna-produce-open-payments-alliance-standards-phase-ii-specification/
+  - name: Open Payments Alliance Standards Phase II Specification
+    coAuthors: HTNG, HEDNA
+    machineReadable: not verified — no public download located
+    evidence: https://www.hedna.org/htng-and-hedna-produce-open-payments-alliance-standards-phase-ii-specification/
+  - name: Management of Digital Assets
+    publisher: HEDNA Standards Committee
+    machineReadable: false
+    note: Prose recommendations for digital asset consistency; not located as a
+      free download on hedna.org.
+  - name: GDS Dual Representation Exception Process
+    publisher: HEDNA Standards Committee
+    machineReadable: false
+  - name: 360 Degrees Virtual Tour and Video Recommendations
+    publisher: HEDNA Standards Committee
+    machineReadable: false
+  - name: 2025 State of Distribution Report
+    access: member-gated
+  - name: The Value of Corporate Travel 2025 / Corporate Travel Study 2025
+    access: member-gated
+    evidence: https://www.hedna.org/corporatetravelstudy2025/ links to
+      members.hedna.org/page/CorporateTravelStudy2025
+certificationProgram:
+  exists: false
+  note: No certification directory, certified-vendor registry, or conformance
+    level scheme was found. The Connectivity Discipline is described as
+    establishing "best practices for live rate requests and vendor certification
+    standards," but no published certification programme, registry, or list of
+    certified parties is publicly available.
+switchingCost:
+  interfaceShape: none-published
+  interfaceShapeEvidence: |
+    No API contract of any kind is published by HEDNA. No OpenAPI, AsyncAPI,
+    GraphQL schema, JSON Schema, WSDL, or XSD was located on hedna.org. The
+    standards HEDNA co-authors (Open Payments Alliance, with HTNG and
+    OpenTravel) are genuine multi-party open standards in intent, but the
+    artifacts themselves were not found publicly downloadable from HEDNA, so
+    HEDNA publishes no interface a customer could integrate against or migrate
+    off. The only machine-readable surface on the domain is the incidental
+    WordPress REST API (https://www.hedna.org/wp-json/, HTTP 200), which is a
+    generic third-party CMS interface, not a HEDNA contract.
+  secondSource: alternatives-with-migration
+  secondSourceAlternativesConsidered: |
+    OpenTravel Alliance (publishes the OTA XML/JSON message schemas — overlaps
+    on payments standards work but is a schema body, not a convener);
+    HTNG / Hospitality Technology Next Generation (closest peer and Open
+    Payments Alliance co-author, but https://www.htng.org/ no longer resolves —
+    connection failure on probe, so no longer an independent second source);
+    AHLA (US hotel industry advocacy, broader than distribution);
+    HSMAI (commercial strategy and revenue; HEDNA has an announced collaboration
+    with HSMAI per its own feed);
+    Phocuswright and EyeForTravel (travel distribution research, commercial not
+    member-governed).
+    Conclusion: adjacent bodies cover parts of HEDNA's remit, but none is a
+    drop-in replacement for distribution-specific convening plus the member
+    library. There is, however, zero technical migration — a departing member
+    loses access to documents and the network, not a running integration.
+  exitPath: no-export-published
+  exitPathEvidence: |
+    No export, dump, bulk, reporting, or data-portability operation is published,
+    because no API is published. The privacy policy
+    (https://www.hedna.org/privacy-user-consent/) states that "Certain tools and
+    settings are provided to help you access, correct, delete, or modify your
+    personal information" and invites contact to "request an update,
+    modification, or deletion of your information, to opt-out of certain
+    services, or to withdraw any consent." It does NOT commit to data
+    portability, machine-readable export, or a GDPR/CCPA request procedure.
+    Member data is held in a third-party database: "The personal information we
+    collect from you is stored in a database hosted by a third party,
+    YourMembership ("YM")." A departing member's practical exit is loss of access
+    to the members-only publications library and HEDNA U courseware; no
+    provision for retaining or exporting downloaded materials is published.
+  identifierPortability: |
+    HEDNA issues no industry identifiers of its own. It operates no chain-code,
+    property-code, or agency-number registry. Its guidance sits over identifiers
+    minted by others — GDS chain and property codes (referenced by the GDS Dual
+    Representation Exception Process document), and the switch/connectivity
+    identifiers used between PMS, CRS, GDS and OTA systems. The only identifier
+    HEDNA controls is an opaque member account record in the YourMembership AMS
+    at members.hedna.org, which is vendor-internal and non-portable.
+  contractualLockIn: |
+    Published annual dues by category (https://www.hedna.org/membership/):
+    Hospitality Professionals $1,950; Technology Partners $1,950; Hospitality
+    Independent Chain (fewer than 50 properties) $950; Industry Experts $500,
+    which "requires Board approval and written service agreement"; Hospitality
+    Single Property (1-3 properties) $250; Educators $250, requires Board
+    approval; Student $50, requires valid student ID and Board approval.
+    No minimum term beyond the annual period, no exclusivity clause, no
+    auto-renewal terms, no termination-notice requirement, and no full-content
+    or volume commitment are published anywhere on hedna.org. Membership terms
+    and conditions were not found as a public document. Nothing further is
+    verifiable and nothing is inferred.
+  accessGate: none-published
+  accessGateDetail: |
+    There is nothing for a developer to sign up for: no portal, no key issuance,
+    no application form, no sandbox. For CONTENT rather than API access, the gate
+    is paid annual membership (see contractualLockIn), with three of the seven
+    categories additionally requiring Board approval and, for Industry Experts, a
+    written service agreement. HEDNA U is delivered through a separate gated LMS
+    at https://www.pathlms.com/hedna. No IATA/ARC accreditation is required —
+    this is a dues-and-approval gate, not a licensed-intermediary gate.
+  distributionModel: not-applicable
+  distributionModelDetail: |
+    HEDNA is a trade association about distribution, not a participant in it. It
+    holds no inventory, operates no switch, and intermediates no bookings. Its
+    members include every layer of the chain — hotel chains, GDS operators, OTAs,
+    switches, channel managers and payment providers — but HEDNA itself sits
+    outside the chain.
+  ndcPosture: |
+    Not applicable. NDC is an IATA air-distribution standard; HEDNA's remit is
+    hotel electronic distribution. No NDC certification, level claim, endpoint or
+    registry entry exists or would be expected. No NDC reference was found on
+    hedna.org during this review.
+probes:
+  date: '2026-07-28'
+  method: curl -s -o /dev/null -w "%{http_code}" -L, browser user-agent where noted
+  results:
+  - url: https://www.hedna.org/
+    status: 200
+  - url: https://hedna.org/
+    status: 200
+    note: redirects to https://www.hedna.org/
+  - url: https://developer.hedna.org/
+    status: 000
+    note: DNS/connection failure — host does not exist
+  - url: https://developers.hedna.org/
+    status: 000
+    note: DNS/connection failure — host does not exist
+  - url: https://docs.hedna.org/
+    status: 000
+    note: DNS/connection failure — host does not exist
+  - url: https://api.hedna.org/
+    status: 000
+    note: DNS/connection failure — host does not exist
+  - url: https://www.hedna.org/developers
+    status: 404
+  - url: https://www.hedna.org/api
+    status: 404
+  - url: https://www.hedna.org/docs
+    status: 404
+  - url: https://www.hedna.org/openapi.json
+    status: 404
+  - url: https://hedna.org/openapi.yaml
+    status: 404
+  - url: https://www.hedna.org/swagger.json
+    status: 404
+  - url: https://www.hedna.org/api-docs
+    status: 404
+  - url: https://www.hedna.org/graphql
+    status: 404
+  - url: https://www.hedna.org/.well-known/
+    status: 404
+  - url: https://www.hedna.org/.well-known/security.txt
+    status: 404
+  - url: https://www.hedna.org/.well-known/ai-plugin.json
+    status: 404
+  - url: https://www.hedna.org/llms.txt
+    status: 404
+  - url: https://www.hedna.org/standards/
+    status: 404
+  - url: https://www.hedna.org/resources/
+    status: 404
+  - url: https://www.hedna.org/publications/
+    status: 404
+  - url: https://www.hedna.org/working-groups/
+    status: 404
+  - url: https://www.hedna.org/disciplines/
+    status: 404
+  - url: https://www.hedna.org/robots.txt
+    status: 200
+    note: Yoast block, Crawl-delay 10, Disallow empty, sitemap declared
+  - url: https://www.hedna.org/sitemap_index.xml
+    status: 200
+    note: 12 child sitemaps; page-sitemap.xml enumerates 49 public pages, none
+      developer- or specification-related
+  - url: https://www.hedna.org/feed/
+    status: 200
+    note: WordPress RSS feed, real blog content
+  - url: https://www.hedna.org/wp-json/
+    status: 200
+    note: WordPress REST API root. name "HEDNA", 15 namespaces (wp/v2, oembed/1.0,
+      contact-form-7/v1, yoast/v1, akismet/v1, redirection/v1, monsterinsights/v1,
+      wpe/cache-plugin/v1, wp-abilities/v1 and others), 249 routes,
+      authentication via application-passwords. Incidental CMS surface — NOT a
+      HEDNA developer offering and NOT listed in apis.yml.
+  - url: https://www.hedna.org/wp-json/wp/v2/pages
+    status: 200
+  - url: https://members.hedna.org/
+    status: 403
+    note: Cloudflare challenge (cf-mitigated challenge) in front of the
+      YourMembership member portal; unreachable unauthenticated
+  - url: https://members.hedna.org/page/what_we_do__pub
+    status: 403
+  - url: https://members.hedna.org/page/members_only__pub
+    status: 403
+  - url: https://www.hedna.org/membership/
+    status: 200
+  - url: https://www.hedna.org/who-we-are/
+    status: 200
+  - url: https://www.hedna.org/hedna-u/
+    status: 200
+  - url: https://www.hedna.org/insights/
+    status: 200
+    note: '"Coming Soon!" placeholder; links to members-only publications library'
+  - url: https://www.hedna.org/hednacommittees/
+    status: 200
+  - url: https://www.hedna.org/corporatetravelstudy2025/
+    status: 200
+    note: report itself gated at members.hedna.org/page/CorporateTravelStudy2025
+  - url: https://www.hedna.org/privacy-user-consent/
+    status: 200
+  - url: https://www.hedna.org/code-of-conduct/
+    status: 200
+  - url: https://www.hedna.org/wp-content/uploads/2021/07/cropped-HEDNA-4C-FavIcon-2021-192x192.jpg
+    status: 200
+    note: image/jpeg, 15757 bytes — used as apis.yml image
+  - url: https://www.htng.org/
+    status: 000
+    note: connection failure — HEDNA's Open Payments Alliance co-author no longer
+      resolves independently
+  - url: https://opentravel.org/
+    status: 403
+    note: bot-blocked; not probed further, out of scope for this profile
+sources:
+- url: https://www.hedna.org/
+  type: Website
+  note: Mission "shaping distribution"; membership scale and navigation.
+- url: https://www.hedna.org/who-we-are/
+  type: About
+  note: '"FOUNDED IN 1991, AS THE ONLY GLOBAL FORUM DEDICATED TO DISTRIBUTION";
+    HQ 2331 Rock Spring Road, Forest Hill, Maryland; volunteer board.'
+- url: https://www.hedna.org/membership/
+  type: Pricing
+  note: Seven membership categories with annual dues $50-$1,950; Board approval
+    and written service agreement conditions.
+- url: https://www.hedna.org/hednacommittees/
+  type: Documentation
+  note: Six committees and five Disciplines; no technical schemas or message
+    formats referenced.
+- url: https://www.hedna.org/hedna-u/
+  type: Education
+  note: '"exclusively available to HEDNA Members"; delivered via
+    https://www.pathlms.com/hedna.'
+- url: https://www.hedna.org/insights/
+  type: Publications
+  note: '"Coming Soon!" — routes readers to
+    members.hedna.org/page/members_only__pub.'
+- url: https://www.hedna.org/corporatetravelstudy2025/
+  type: Publications
+  note: Member-gated research report.
+- url: https://www.hedna.org/privacy-user-consent/
+  type: PrivacyPolicy
+  note: Access/correct/delete on request; YourMembership third-party data
+    hosting; no portability or export commitment.
+- url: https://www.hedna.org/htng-and-hedna-produce-open-payments-alliance-standards-phase-ii-specification/
+  type: Announcement
+  note: Open Payments Alliance Standards Phase II Specification with HTNG.
+- url: https://www.hedna.org/feed/
+  type: BlogRSS
+  note: Live RSS feed; recent items include HSMAI collaboration and NYU
+    SPS/RateGain benchmarking report.
+actions:
+  apisListed: 0
+  openapiHarvested: false
+  specsCount: 0
+  openapiDirectoryCreated: false
+  reason: |
+    No OpenAPI, AsyncAPI, GraphQL schema, or other machine-readable contract was
+    found anywhere on hedna.org or its subdomains. Nothing was fabricated and no
+    openapi/ directory was created. The WordPress REST API root at
+    https://www.hedna.org/wp-json/ was confirmed live and parseable but is an
+    incidental CMS surface rather than a published HEDNA API, so it was recorded
+    here as evidence and excluded from apis.yml apis[].
+  status: built-stub
