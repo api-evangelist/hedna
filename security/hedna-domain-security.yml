@@ -1,0 +1,15 @@
+generated: '2026-07-28'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.hedna.org
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  2 21:53:10 2026 GMT
+  hsts: false
+domains:
+- domain: hedna.org
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false

@@ -290,6 +290,86 @@ probes:
   - url: https://opentravel.org/
     status: 403
     note: bot-blocked; not probed further, out of scope for this profile
+enrichment:
+  date: '2026-07-28'
+  round: 2
+  contractDiscovery:
+    openapi: false
+    graphql: false
+    asyncapi: false
+    mcp: false
+    detail: |
+      Re-ran the full contract-discovery sequence against every host associated
+      with HEDNA — www.hedna.org, hedna.org, members.hedna.org, and the
+      non-resolving developer./developers./docs./api. subdomains. No REST
+      OpenAPI on any API-host root, no GraphQL endpoint to introspect, no MCP
+      server, no AsyncAPI, and no /.well-known/ discovery surface. There is no
+      API host to probe: HEDNA operates a WordPress marketing site and a
+      third-party YourMembership portal, nothing else. The conclusion of round 1
+      stands.
+  artifacts:
+  - path: well-known/hedna-well-known.yml
+    method: searched
+    result: all-404
+    note: Recorded absence. Deliberately NOT wired as a WellKnown pointer in
+      apis.yml — there is no well-known document to point at, and wiring one
+      would misrepresent the provider.
+  - path: security/hedna-domain-security.yml
+    method: probed
+    result: TLSv1.3, no HSTS, no DNSSEC, no CAA, SPF present, no DMARC
+  - path: llms/hedna-llms.txt
+    method: generated
+    note: Written primarily as a negative signal — it states that no API, SDK, or
+      specification exists so agents do not hallucinate one.
+  notFound:
+    packages: npm and PyPI searches for "hedna" return no first-party client
+      library; there is no API to write a client against.
+    githubOrganization: github.com/hedna resolves but is an empty personal
+      account with no repositories and no association branding — not recorded as
+      HEDNA's GitHub organization.
+    vulnerabilityDisclosure: no security.txt, no /security page, no bug bounty
+      programme found (probe-security-programs.py returned vdp=none).
+    trustCenter: no trust.hedna.org, no compliance page, no named certifications
+      (probe returned trust=none).
+    termsOfService: /terms/, /terms-of-use/ and /terms-and-conditions/ all 404;
+      membership terms are not published as a public document.
+    changelog: the blog is editorial news, not a dated product changelog.
+    contractDependentArtifacts: >-
+      sandbox, cli, components, conformance, errors, lifecycle, scopes,
+      authentication, overlays, grpc, data-model, skills, mcp, agentic-access —
+      all skipped as not applicable; every one requires an API contract that
+      does not exist.
+  newFindings:
+  - finding: HEDNA publishes a first-party conference companion app on both app
+      stores (HEDNA Conferences, built on the XCD Systems event platform).
+    evidence: https://www.hedna.org/hednaconferencesapp/
+    urls:
+    - https://apps.apple.com/ca/app/hedna-conferences/id6749077685
+    - https://play.google.com/store/apps/details?id=com.xcdsystem.hedna
+    note: Wired as MobileApp pointers. It is a delegated event app, not a
+      developer surface, and carries no public API.
+  - finding: Member registration and login endpoints are publicly linked from the
+      membership page.
+    urls:
+    - https://members.hedna.org/general/register_member_type.asp
+    - https://members.hedna.org/login.aspx
+    note: Wired as SignUp and Login. Membership signup, not developer signup.
+  corrections:
+  - subject: HTNG second-source availability
+    round1: '"HTNG no longer resolves as an independent site (https://www.htng.org/
+      connection failure), which materially thins the set of alternative bodies."'
+    correction: |
+      htng.org and www.htng.org still fail to resolve, but HTNG has not
+      disappeared — it now operates under AHLA. https://www.ahla.com/htng
+      returns HTTP 200 and https://www.ahla.com/htng-technical-specifications
+      hosts a public, free technical-specification library (PDF guides plus at
+      least one Stoplight-hosted interactive document with sample XML messages at
+      htng.stoplight.io). HEDNA's closest peer body therefore remains a live
+      second source with a MORE open publication posture than HEDNA's own
+      member-gated library. The Open Payments Alliance specification itself was
+      still not located as a public download, and HEDNA co-authorship of the
+      AHLA/HTNG Stoplight documents was not verifiable, so nothing is claimed.
+    verified: '2026-07-28'
 sources:
 - url: https://www.hedna.org/
   type: Website

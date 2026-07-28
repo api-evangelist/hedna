@@ -68,6 +68,49 @@ common:
   description: YourMembership-hosted association management system holding the
     publications library and research reports; returns HTTP 403 behind a
     Cloudflare challenge to unauthenticated clients.
+- type: Pricing
+  url: https://www.hedna.org/membership/
+  name: Membership Dues
+  description: Seven membership categories with published annual dues from $50 to
+    $1,950; three categories additionally require Board approval. This is the
+    only published price list — there is no developer or API pricing.
+- type: SignUp
+  url: https://members.hedna.org/general/register_member_type.asp
+  name: Member Registration
+  description: YourMembership member-type registration form linked from the
+    membership page. Membership signup only; no developer or API signup exists.
+- type: Login
+  url: https://members.hedna.org/login.aspx
+  name: Member Login
+- type: GetInvolved
+  url: https://www.hedna.org/get-involved/
+  name: Get Involved
+  description: Routes members into the five Disciplines (Connectivity, Content
+    Distribution, Payments, Revenue and Data) on members.hedna.org.
+- type: Sponsorship
+  url: https://www.hedna.org/sponsorship/
+- type: Conferences
+  url: https://www.hedna.org/global-conferences/
+- type: MobileApp
+  url: https://apps.apple.com/ca/app/hedna-conferences/id6749077685
+  name: HEDNA Conferences (iOS)
+  description: First-party conference companion app published on the Apple App
+    Store; built on the XCD Systems event platform. Not a developer SDK.
+- type: MobileApp
+  url: https://play.google.com/store/apps/details?id=com.xcdsystem.hedna
+  name: HEDNA Conferences (Android)
+  description: First-party conference companion app published on Google Play;
+    built on the XCD Systems event platform. Not a developer SDK.
+- type: LLMsTxt
+  url: llms/hedna-llms.txt
+  name: llms.txt
+  description: Generated llms.txt for HEDNA — states plainly that no API, SDK, or
+    machine-readable specification exists so agents do not hallucinate one.
+- type: DomainSecurity
+  url: security/hedna-domain-security.yml
+  name: Domain Security Posture
+  description: Probed TLS, HSTS, DNSSEC, CAA, SPF and DMARC posture for
+    hedna.org and www.hedna.org.
 - type: PrivacyPolicy
   url: https://www.hedna.org/privacy-user-consent/
 - type: CodeOfConduct

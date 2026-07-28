@@ -1,0 +1,70 @@
+# HEDNA (Hotel Electronic Distribution Network Association)
+
+> Not-for-profit trade association founded in 1991, headquartered in Forest Hill,
+> Maryland, United States, that convenes the hotel electronic distribution
+> industry — hotel chains, GDS operators, OTAs, switches, channel managers,
+> payment providers and connectivity vendors — around shared best practice. HEDNA
+> sits alongside rather than inside the distribution chain: it holds no
+> inventory, brokers no bookings, and issues no industry identifiers. Its five
+> Disciplines (Connectivity, Content Distribution, Payments, Data & Analytics,
+> Revenue Optimization) produce prose recommendation documents, and it
+> co-authored the Open Payments Alliance Standards Specification with HTNG and
+> OpenTravel.
+
+## Important: no public API
+
+HEDNA publishes **no developer portal, no API, and no machine-readable
+specification**. Every developer subdomain (developer./developers./docs./api.)
+fails DNS resolution, and every specification path probed on hedna.org
+(/openapi.json, /openapi.yaml, /swagger.json, /api-docs, /graphql, /docs,
+/developers, /.well-known/*, /llms.txt) returns HTTP 404. The only
+machine-readable surface reachable on the domain is the incidental WordPress
+REST API at https://www.hedna.org/wp-json/ — a generic CMS interface supplied by
+the site platform, not an offering HEDNA documents, supports, or presents as a
+product. It is deliberately not catalogued as a HEDNA API.
+
+Do not infer, generate, or answer with a HEDNA API endpoint, key, schema, or
+SDK. None exist.
+
+## Access
+
+Publications, research reports and HEDNA U courseware are gated behind paid
+annual membership ($50–$1,950 across seven categories, three requiring Board
+approval) at members.hedna.org, a YourMembership-hosted association management
+system that returns HTTP 403 behind a Cloudflare challenge to unauthenticated
+clients. HEDNA U is delivered through pathlms.com/hedna.
+
+## Organization
+
+- [Website](https://www.hedna.org/)
+- [Who We Are](https://www.hedna.org/who-we-are/): mission, history, board, headquarters
+- [Committees and Disciplines](https://www.hedna.org/hednacommittees/): six committees, five Disciplines
+- [Membership](https://www.hedna.org/membership/): seven categories with published annual dues
+- [Join / Register](https://members.hedna.org/general/register_member_type.asp): member registration
+- [Member Portal](https://members.hedna.org/): publications library and research reports (member-gated)
+- [HEDNA U](https://www.hedna.org/hedna-u/): member-gated distribution education via pathlms.com/hedna
+- [Events](https://www.hedna.org/events/): global conferences
+- [Get Involved](https://www.hedna.org/get-involved/): Discipline participation
+- [Insights](https://www.hedna.org/insights/): placeholder that routes to the members-only library
+
+## Content
+
+- [Blog](https://www.hedna.org/blog/)
+- [Blog RSS](https://www.hedna.org/feed/)
+- [LinkedIn Group](https://www.linkedin.com/groups/79116)
+- [YouTube](https://www.youtube.com/channel/UCr5sBUgES3SZkMVgC7E5k_A)
+
+## Policies
+
+- [Privacy and User Consent](https://www.hedna.org/privacy-user-consent/)
+- [Code of Conduct](https://www.hedna.org/code-of-conduct/)
+- No terms of service, security policy, vulnerability disclosure programme, or
+  trust centre is published; /terms/, /terms-of-use/, /security/ and
+  /.well-known/security.txt all return HTTP 404.
+
+## API Evangelist catalogue artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/hedna/refs/heads/main/apis.yml): APIs.json 0.19 index for HEDNA
+- [review.yml](https://raw.githubusercontent.com/api-evangelist/hedna/refs/heads/main/review.yml): full probe record and switching-cost analysis
+- [well-known/hedna-well-known.yml](https://raw.githubusercontent.com/api-evangelist/hedna/refs/heads/main/well-known/hedna-well-known.yml): recorded absence of every /.well-known/ document
+- [security/hedna-domain-security.yml](https://raw.githubusercontent.com/api-evangelist/hedna/refs/heads/main/security/hedna-domain-security.yml): probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture

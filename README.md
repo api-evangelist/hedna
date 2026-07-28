@@ -35,6 +35,14 @@ No public APIs are published by HEDNA. As a trade association it publishes prose
 - **Access gate:** none-published for developers; paid annual membership (plus Board approval for three categories) for the document library.
 - **Distribution model:** not-applicable. **NDC posture:** not applicable — NDC is an air standard, HEDNA's remit is hotels.
 
+## Artifacts
+
+- [llms/hedna-llms.txt](llms/hedna-llms.txt) — generated llms.txt, written mainly as a negative signal so agents do not hallucinate a HEDNA API.
+- [security/hedna-domain-security.yml](security/hedna-domain-security.yml) — probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture (TLSv1.3, SPF present; no HSTS, DNSSEC, CAA or DMARC).
+- [well-known/hedna-well-known.yml](well-known/hedna-well-known.yml) — recorded absence: every `/.well-known/` path returns 404. Deliberately not wired as a `WellKnown` pointer, because there is nothing to point at.
+
+No `openapi/`, `asyncapi/`, `mcp/`, `skills/`, `scopes/`, `authentication/`, `errors/`, `lifecycle/`, `conventions/`, `sandbox/`, `cli/` or `components/` artifacts exist here — each requires an API contract HEDNA does not publish. See [review.yml](review.yml) `enrichment:` for the round-2 probe record.
+
 ## Common Properties
 
 - [Website](https://www.hedna.org/)
@@ -45,8 +53,15 @@ No public APIs are published by HEDNA. As a trade association it publishes prose
 - [HEDNA U](https://www.hedna.org/hedna-u/)
 - [Committees and Disciplines](https://www.hedna.org/hednacommittees/)
 - [Events](https://www.hedna.org/events/)
+- [Global Conferences](https://www.hedna.org/global-conferences/)
+- [Sponsorship](https://www.hedna.org/sponsorship/)
 - [Insights](https://www.hedna.org/insights/)
 - [Members-Only Portal](https://members.hedna.org/)
+- [Member Registration](https://members.hedna.org/general/register_member_type.asp)
+- [Member Login](https://members.hedna.org/login.aspx)
+- [Get Involved](https://www.hedna.org/get-involved/)
+- [HEDNA Conferences (iOS)](https://apps.apple.com/ca/app/hedna-conferences/id6749077685)
+- [HEDNA Conferences (Android)](https://play.google.com/store/apps/details?id=com.xcdsystem.hedna)
 - [Privacy Policy](https://www.hedna.org/privacy-user-consent/)
 - [Code of Conduct](https://www.hedna.org/code-of-conduct/)
 - [LinkedIn](https://www.linkedin.com/groups/79116)
