@@ -21,6 +21,17 @@ description: >-
   members.hedna.org (HTTP 403 Cloudflare challenge unauthenticated) and
   pathlms.com/hedna. Honest posture: member-gated documents, no public API, no
   exit path published.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.hedna.org/wp-content/uploads/2021/07/cropped-HEDNA-4C-FavIcon-2021-192x192.jpg
 tags:
 - Travel
