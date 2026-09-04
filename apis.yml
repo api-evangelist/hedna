@@ -32,6 +32,18 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://www.hedna.org/wp-content/uploads/2021/07/cropped-HEDNA-4C-FavIcon-2021-192x192.jpg
 tags:
 - Travel
