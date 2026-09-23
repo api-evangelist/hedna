@@ -2,39 +2,16 @@ generated: '2026-07-28'
 method: searched
 source: live probes of hedna.org / www.hedna.org / members.hedna.org
 host: https://www.hedna.org
-note: >-
-  HEDNA publishes no /.well-known/ discovery surface. Every RFC-defined
-  well-known path probed returned HTTP 404 on the public WordPress site, and the
-  YourMembership member portal at members.hedna.org sits behind a Cloudflare
-  challenge that returns HTTP 403 to unauthenticated clients (the 403 is the
-  challenge, not evidence of a document). Absence is the recorded result — no
-  WellKnown, SecurityTxt, or APICatalog pointer is wired in apis.yml because
-  there is nothing to point at.
-documents:
-- path: /.well-known/security.txt
-  standard: RFC 9116
-  status: 404
-- path: /.well-known/openid-configuration
-  standard: OpenID Connect Discovery 1.0
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  standard: RFC 8414
-  status: 404
-- path: /.well-known/api-catalog
-  standard: RFC 9727
-  status: 404
-- path: /.well-known/ai-plugin.json
-  standard: OpenAI plugin manifest
-  status: 404
-- path: /llms.txt
-  standard: llms.txt
-  status: 404
+note: HEDNA publishes no /.well-known/ discovery surface. Every RFC-defined well-known path probed returned
+  HTTP 404 on the public WordPress site, and the YourMembership member portal at members.hedna.org sits
+  behind a Cloudflare challenge that returns HTTP 403 to unauthenticated clients (the 403 is the challenge,
+  not evidence of a document). Absence is the recorded result — no WellKnown, SecurityTxt, or APICatalog
+  pointer is wired in apis.yml because there is nothing to point at.
 other_hosts:
 - host: https://members.hedna.org
   path: /.well-known/security.txt
   status: 403
-  note: Cloudflare bot challenge on the whole host; unauthenticated probes cannot
-    reach any path.
+  note: Cloudflare bot challenge on the whole host; unauthenticated probes cannot reach any path.
 - host: https://developer.hedna.org
   status: 0
   note: DNS resolution failure — host does not exist.
@@ -44,3 +21,26 @@ other_hosts:
 - host: https://docs.hedna.org
   status: 0
   note: DNS resolution failure — host does not exist.
+hosts:
+- host: https://www.hedna.org
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    standard: RFC 9116
+  - path: /.well-known/openid-configuration
+    status: 404
+    standard: OpenID Connect Discovery 1.0
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    standard: RFC 8414
+  - path: /.well-known/api-catalog
+    status: 404
+    standard: RFC 9727
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    standard: OpenAI plugin manifest
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
