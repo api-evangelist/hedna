@@ -1,4 +1,4 @@
-# HEDNA (hedna)
+# HEDNA
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,73 +66,81 @@
 
 HEDNA (Hotel Electronic Distribution Network Association) is a not-for-profit trade association founded in 1991 and headquartered in Forest Hill, Maryland, United States, that convenes the hotel distribution industry — hotel chains, GDS operators, OTAs, switches, channel managers, payment providers and connectivity vendors — around shared best practice for hospitality electronic distribution. It sits alongside rather than inside the distribution chain: it moves no inventory and processes no bookings, but its Disciplines (Connectivity, Content Distribution, Payments, Data & Analytics, Revenue Optimization) produce recommendation documents, and it co-authored the Open Payments Alliance Standards Specification with HTNG and OpenTravel. HEDNA publishes no developer portal, no API, and no machine-readable specification on hedna.org; every probe of developer./developers./docs./api. subdomains and of /developers, /api, /docs, /openapi.json, /swagger.json, /api-docs and /.well-known/ failed (DNS failure or HTTP 404). Its publications library, research reports and HEDNA U courseware are gated behind paid membership at members.hedna.org (HTTP 403 Cloudflare challenge unauthenticated) and pathlms.com/hedna. Honest posture: member-gated documents, no public API, no exit path published.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/hedna/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/hedna/refs/heads/main/apis.yml)
+**Areas:** Travel · United States · Hospitality · Hotels · Distribution · Booking · GDS · Standards · Trade Association
 
-## Tags
+## HEDNA on APIs.io
 
-- Travel
-- United States
-- Hospitality
-- Hotels
-- Distribution
-- Booking
-- GDS
-- Standards
-- Trade Association
+Everything profiled for HEDNA is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/hedna/](https://apis.io/providers/hedna/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-07-28
-- **Modified:** 2026-07-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (1)
 
-No public APIs are published by HEDNA. As a trade association it publishes prose recommendations and member-gated research rather than a developer surface. See [review.yml](review.yml) for the full probe record, including the incidental WordPress REST API at `https://www.hedna.org/wp-json/` that was confirmed live but deliberately not listed as a HEDNA API offering.
+Authentication, trust centre, and vulnerability disclosure.
 
-## Switching Cost
+- [Hedna Domain Security](https://apis.io/security/hedna/hedna-domain-security/)
 
-- **Interface shape:** none-published — no API contract of any kind.
-- **Second source:** alternatives-with-migration — OpenTravel Alliance, AHLA, HSMAI and Phocuswright cover adjacent ground; HTNG, the closest peer, no longer resolves independently.
-- **Exit path:** no-export-published — access/correct/delete on request in the privacy policy, no portability or export commitment.
-- **Identifier portability:** HEDNA issues no industry identifiers; its guidance sits over GDS chain and property codes minted by others. Only an opaque YourMembership member record is HEDNA-controlled.
-- **Contractual lock-in:** published annual dues $50–$1,950 across seven categories; no minimum term, exclusivity or termination notice published.
-- **Access gate:** none-published for developers; paid annual membership (plus Board approval for three categories) for the document library.
-- **Distribution model:** not-applicable. **NDC posture:** not applicable — NDC is an air standard, HEDNA's remit is hotels.
+## Where to find this API
 
-## Artifacts
-
-- [llms/hedna-llms.txt](llms/hedna-llms.txt) — generated llms.txt, written mainly as a negative signal so agents do not hallucinate a HEDNA API.
-- [security/hedna-domain-security.yml](security/hedna-domain-security.yml) — probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture (TLSv1.3, SPF present; no HSTS, DNSSEC, CAA or DMARC).
-- [well-known/hedna-well-known.yml](well-known/hedna-well-known.yml) — recorded absence: every `/.well-known/` path returns 404. Deliberately not wired as a `WellKnown` pointer, because there is nothing to point at.
-
-No `openapi/`, `asyncapi/`, `mcp/`, `skills/`, `scopes/`, `authentication/`, `errors/`, `lifecycle/`, `conventions/`, `sandbox/`, `cli/` or `components/` artifacts exist here — each requires an API contract HEDNA does not publish. See [review.yml](review.yml) `enrichment:` for the round-2 probe record.
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.hedna.org/)
-- [About](https://www.hedna.org/who-we-are/)
+- [Pricing](https://www.hedna.org/membership/)
+- [Sign up](https://members.hedna.org/general/register_member_type.asp)
 - [Blog](https://www.hedna.org/blog/)
-- [Blog RSS](https://www.hedna.org/feed/)
-- [Membership](https://www.hedna.org/membership/)
-- [HEDNA U](https://www.hedna.org/hedna-u/)
-- [Committees and Disciplines](https://www.hedna.org/hednacommittees/)
-- [Events](https://www.hedna.org/events/)
-- [Global Conferences](https://www.hedna.org/global-conferences/)
-- [Sponsorship](https://www.hedna.org/sponsorship/)
-- [Insights](https://www.hedna.org/insights/)
-- [Members-Only Portal](https://members.hedna.org/)
-- [Member Registration](https://members.hedna.org/general/register_member_type.asp)
-- [Member Login](https://members.hedna.org/login.aspx)
-- [Get Involved](https://www.hedna.org/get-involved/)
-- [HEDNA Conferences (iOS)](https://apps.apple.com/ca/app/hedna-conferences/id6749077685)
-- [HEDNA Conferences (Android)](https://play.google.com/store/apps/details?id=com.xcdsystem.hedna)
-- [Privacy Policy](https://www.hedna.org/privacy-user-consent/)
-- [Code of Conduct](https://www.hedna.org/code-of-conduct/)
-- [LinkedIn](https://www.linkedin.com/groups/79116)
-- [YouTube](https://www.youtube.com/channel/UCr5sBUgES3SZkMVgC7E5k_A)
-- [Email](mailto:info@hedna.org)
+- [Privacy policy](https://www.hedna.org/privacy-user-consent/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 12.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 34.2 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 9.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/hedna/](https://apis.io/providers/hedna/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for HEDNA: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/hedna/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
